@@ -2,12 +2,14 @@
 import * as THREE from 'three';
 import * as Fiber from '@react-three/fiber';
 import * as Drei from '@react-three/drei';
+import * as Postprocessing from '@react-three/postprocessing';
 
 // Build a namespace object
 const My3D = {
   THREE,
   ...Fiber,
   ...Drei,
+  ...Postprocessing,
 };
 
 // Expose it globally (so Framer can use it via <script> tag)
@@ -19,4 +21,5 @@ if (typeof window !== 'undefined') {
 export { THREE };
 export * from '@react-three/fiber';
 export * from '@react-three/drei';
+export * from '@react-three/postprocessing';
 export default My3D;
